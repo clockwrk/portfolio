@@ -11,10 +11,10 @@ let pg = require('pg');
 let http = require("http");
 
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json())
 
-router.use(morgan(':method :url :status :response-time ms - :res[content-length]'));
+// router.use(morgan(':method :url :status :response-time ms - :res[content-length]'));
 
 app.set('env', env)
 
@@ -53,4 +53,3 @@ db.sync()
     .catch(function(err) {
         console.error(chalk.red(err.stack));
     });
-
